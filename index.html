@@ -7,17 +7,23 @@
 <title>Hafshoh Aqiqah</title>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" />
 
 <style>
 
-/* --------------- GLOBAL --------------- */
+/* ----------------------------------------------------
+   GLOBAL
+---------------------------------------------------- */
 body{
   margin:0;
   font-family:"Poppins",sans-serif;
   background:#fff;
 }
+h1,h2,h3{ margin:0; }
 
-/* --------------- WHATSAPP BUBBLE --------------- */
+/* ----------------------------------------------------
+   WHATSAPP FLOAT
+---------------------------------------------------- */
 .wa-bubble{
   position:fixed;
   bottom:22px;
@@ -37,44 +43,43 @@ body{
   box-shadow:0 4px 12px rgba(0,0,0,.2);
   transition:.25s;
 }
-.wa-bubble a:hover{
-  transform:scale(1.05);
-}
-.wa-icon i{
-  font-size:22px;
-}
+.wa-bubble a:hover{ transform:scale(1.05); }
+.wa-icon i{ font-size:22px; }
 
-/* --------------- NAVBAR --------------- */
+/* ----------------------------------------------------
+   NAVBAR
+---------------------------------------------------- */
 .navbar{
   background:linear-gradient(to right,#ff5f02,#ff9d0a);
   display:flex;
   align-items:center;
-  padding:12px 26px;
-  gap:22px;
+  padding:12px 22px;
+  gap:16px;
   box-shadow:0 4px 12px rgba(0,0,0,0.18);
   position:sticky;
   top:0;
-  z-index:99;
+  z-index:999;
 }
 .navbar img{
-  width:60px;
-  border-radius:12px;
+  width:55px;
+  border-radius:10px;
 }
 .brand{
-  font-size:28px;
+  font-size:26px;
   font-weight:700;
   color:white;
 }
+
 .nav-right{
   margin-left:auto;
   display:flex;
-  gap:32px;
+  gap:28px;
 }
 .nav-right a{
   color:white;
   text-decoration:none;
   font-weight:600;
-  padding:12px 8px;
+  padding:10px 6px;
   position:relative;
 }
 .nav-right a::after{
@@ -88,17 +93,22 @@ body{
   border-radius:5px;
   transition:.25s;
 }
-.nav-right a:hover::after{
-  width:100%;
+.nav-right a:hover::after{ width:100%; }
+
+/* Hamburger */
+#hamburger{
+  display:none;
+  font-size:36px;
+  color:white;
+  cursor:pointer;
 }
 
-/* --------------- HERO BACKGROUND --------------- */
+/* ----------------------------------------------------
+   HERO
+---------------------------------------------------- */
 .hero{
-  height:85vh;
-  background:url("tongseng kambing (1).jpg");
-  background-size:cover;
-  background-position:center;
-  background-repeat:no-repeat;
+  height:80vh;
+  background:url("tongseng kambing (1).jpg") center/cover no-repeat;
   display:flex;
   justify-content:center;
   align-items:center;
@@ -111,23 +121,12 @@ body{
 .hero::before{
   content:"";
   position:absolute;
-  width:100%;
-  height:100%;
-  left:0;
-  top:0;
+  inset:0;
   background:rgba(0,0,0,0.55);
-  z-index:0;
 }
-.hero h1{
-  font-size:44px;
-  margin-bottom:10px;
-  font-weight:800;
-}
-.hero p{
-  font-size:20px;
-  max-width:550px;
-  font-weight:500;
-}
+.hero *{ position:relative; z-index:2; }
+.hero h1{ font-size:42px; font-weight:800; }
+.hero p{ max-width:550px; font-size:18px; }
 .btn-primary{
   padding:14px 26px;
   background:#ff6505;
@@ -135,369 +134,41 @@ body{
   text-decoration:none;
   font-weight:700;
   border-radius:10px;
-  display:inline-block;
-  margin-top:24px;
+  margin-top:20px;
   transition:.2s;
 }
-.btn-primary:hover{
-  opacity:.85;
-  transform:translateY(-2px);
-}
+.btn-primary:hover{ opacity:.85; transform:translateY(-2px); }
 
-/* --------------- SECTION DEFAULT --------------- */
-section{
-  padding:70px 22px;
-  text-align:center;
-}
+/* ----------------------------------------------------
+   SECTION DEFAULT
+---------------------------------------------------- */
+section{ padding:70px 22px; text-align:center; }
 section h2{
   font-size:32px;
   margin-bottom:25px;
   font-weight:800;
-  text-transform:uppercase;
 }
-
-/* --------------- BACKGROUND TENTANG --------------- */
-#tentang{
-  background:linear-gradient(135deg,#fff5e6,#ffe7d1,#fff5e9);
-}
-
-/* --------------- BACKGROUND INFO SYARIAH --------------- */
+/* ----------------------------------------------------
+   INFO SYARIAH (FINAL)
+---------------------------------------------------- */
 .info-section{
-  background:url("bg-islamic-gold.jpg");
-  background-size:cover;
-  background-position:center;
-  position:relative;
-}
-.info-section::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:rgba(255,230,185,0.82);
-}
-.info-section *{
-  position:relative;
-  z-index:2;
-}
-/* --------------- BACKGROUND INFO SYARIAH --------------- */
-.info-section{
-  background:url("info-bg.jpg");
-  background-size:cover;
-  background-position:center;
-  background-repeat:no-repeat;
-  position:relative;
-}
-.info-section::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:rgba(255,230,185,0.45); /* overlay ringan biar gambar terlihat jelas */
-}
-.info-section *{
-  position:relative;
-  z-index:2;
-}
-/* --------------- BACKGROUND INFO SYARIAH --------------- */
-.info-section{
-  background:url("info-bg.jpg");
-  background-size:cover;
-  background-position:center;
-  background-repeat:no-repeat;
-  position:relative;
-}
-.info-section::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:rgba(255,230,185,0.45); /* overlay ringan biar gambar terlihat jelas */
-}
-.info-section *{
-  position:relative;
-  z-index:2;
-}
-/* --------------- BACKGROUND INFO SYARIAH --------------- */
-.info-section{
-  background:url("info-bg.jpg");
-  background-size:cover;
-  background-position:center;
-  background-repeat:no-repeat;
-  position:relative;
-}
-.info-section::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:rgba(255,230,185,0.45); /* overlay ringan biar gambar terlihat jelas */
-}
-.info-section *{
-  position:relative;
-  z-index:2;
-}
-
-
-/* --------------- PAKET BACKGROUND --------------- */
-.menu-section{
-  background:url("bg-food.jpg");
-  background-size:cover;
-  background-position:center;
-  position:relative;
-}
-
-.menu-section::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:rgba(255,255,255,0.9);
-}
-.menu-section *{
-  position:relative;
-  z-index:2;
-}
-
-/* --------------- KARTU MENU --------------- */
-.menu-list{
-  display:flex;
-  justify-content:center;
-  gap:32px;
-  flex-wrap:wrap;
-}
-.menu-card{
-  width:310px;
-  background:white;
-  border-radius:18px;
-  overflow:hidden;
-  box-shadow:0 4px 14px rgba(0,0,0,.12);
-  transition:.25s;
-}
-.menu-card:hover{
-  transform:translateY(-6px);
-}
-.menu-card img{
-  width:100%;
-  height:200px;
-  object-fit:cover;
-}
-.menu-card-content{
-  padding:20px;
-  text-align:left;
-}
-.menu-card h3{
-  font-size:22px;
-  margin-bottom:12px;
-}
-.menu-card ul{
-  margin-left:18px;
-  line-height:1.55;
-}
-.price{
-  margin-top:14px;
-  font-size:22px;
-  font-weight:700;
-  color:#ff5f02;
-}
-
-/* --------------- TESTIMONI BACKGROUND --------------- */
-.testi-section{
-  background:url("bg-gold-islamic.jpg");
-  background-size:cover;
-  background-position:center;
-  position:relative;
-}
-.testi-section::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:rgba(255,245,230,0.85);
-}
-.testi-section *{
-  position:relative;
-  z-index:2;
-}
-
-/* TESTI CARD */
-.testi-slider{
-  display:flex;
-  gap:26px;
-  overflow-x:auto;
-  scroll-snap-type:x mandatory;
-  padding-bottom:18px;
-}
-.testi-slider::-webkit-scrollbar{
-  display:none;
-}
-.testi-card{
-  flex:0 0 310px;
-  background:white;
-  border-radius:22px;
-  padding:24px;
-  box-shadow:0 6px 14px rgba(0,0,0,.10);
-  scroll-snap-align:center;
-  text-align:left;
-  position:relative;
-}
-.testi-photo{
-  width:70px;
-  height:70px;
-  border-radius:50%;
-  object-fit:cover;
-  border:3px solid #d4a45d;
-  position:absolute;
-  top:-35px;
-  left:20px;
-}
-.testi-card p{
-  font-size:17px;
-  line-height:1.52;
-  color:#3a2920;
-  margin-top:40px;
-}
-.testi-name{
-  margin-top:12px;
-  font-weight:700;
-  font-size:18px;
-  color:#a87435;
-}
-
-.btn-testi{
-  padding:14px 26px;
-  background:#ff6505;
-  color:white;
-  font-weight:700;
-  border-radius:12px;
-  text-decoration:none;
-  transition:.22s;
-  margin-top:40px;
-  display:inline-block;
-}
-/* FOOTER */
-.footer {
-  background: #222;
-  color: #fff;
-  padding: 50px 20px 20px;
-  margin-top: 50px;
-  font-family: "Poppins", sans-serif;
-}
-
-.footer-container {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 30px;
-  max-width: 1200px;
-  margin: auto;
-}
-
-.footer-brand h2 {
-  margin: 0 0 10px;
-  color: #ff8c00;
-}
-
-.footer-links h3,
-.footer-social h3 {
-  margin-bottom: 10px;
-  font-size: 18px;
-  color: #ff8c00;
-}
-
-.footer-links ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-links ul li {
-  margin-bottom: 8px;
-}
-
-.footer-links ul li a {
-  color: #eee;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.footer-links ul li a i {
-  margin-right: 8px;
-}
-
-.footer-links ul li a:hover {
-  color: #ff8c00;
-}
-
-.social-icons a {
-  font-size: 22px;
-  color: #eee;
-  margin-right: 15px;
-  transition: 0.3s;
-}
-
-.social-icons a:hover {
-  color: #ff8c00;
-}
-
-.footer-bottom {
-  text-align: center;
-  border-top: 1px solid #444;
-  margin-top: 30px;
-  padding-top: 15px;
-  font-size: 14px;
-  color: #ccc;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .social-icons a {
-    margin: 0 10px;
-  }
-}
-/* --------------- BACKGROUND INFO SYARIAH --------------- */
-.info-section{
-  background:url("ternak-kambing.jpg");
-  background-size:cover;
-  background-position:center;
-  background-repeat:no-repeat;
-  position:relative;
-  padding:80px 20px;
-  color:#3a2920;
-}
-
-.info-section::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:rgba(255,255,255,0.55); /* overlay agar teks tetap terbaca */
-}
-
-.info-section *{
-  position:relative;
-  z-index:2;
-}
-
-/* --------------- INFO SYARIAH (BACKGROUND TERNAK KAMBING + GELAP) --------------- */
-.info-section{
-  height: 70vh;
-  background:url("ternak-kambing.jpg");
-  background-size:cover;
-  background-position:center;
-  background-repeat:no-repeat;
+  min-height:65vh;
+  background:url("ternak-kambing.jpg") center/cover no-repeat;
   display:flex;
   justify-content:center;
   align-items:center;
   flex-direction:column;
-  text-align:center;
-  color:white; 
-  padding:0 20px;
+  color:white;
   position:relative;
+  padding:40px 20px;
 }
 
 .info-section::before{
   content:"";
   position:absolute;
   inset:0;
-  background:rgba(0,0,0,0.55); /* overlay gelap */
-  z-index:0;
+  background:rgba(0,0,0,0.55);   /* Lapisan gelap agar teks tetap jelas */
+  backdrop-filter:blur(2px);     /* Agar foto terlihat lebih lembut */
 }
 
 .info-section *{
@@ -506,27 +177,189 @@ section h2{
 }
 
 .info-section h2{
-  font-size:40px;
-  margin-bottom:12px;
+  font-size:32px;
+  margin-bottom:15px;
   font-weight:800;
 }
 
 .info-section p{
-  font-size:20px;
-  max-width:600px;
-  font-weight:500;
+  max-width:650px;
+  font-size:18px;
   line-height:1.6;
+  margin:0;
 }
 
+/* ----------------------------------------------------
+   MENU AQIQAH
+---------------------------------------------------- */
+.menu-section{
+  background:#fff;
+}
 
+.menu-list{
+  display:flex;
+  justify-content:center;
+  gap:26px;
+  flex-wrap:wrap;
+}
 
+.menu-card{
+  width:300px;
+  background:white;
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow:0 4px 14px rgba(0,0,0,.12);
+  transition:.25s;
+}
+.menu-card:hover{ transform:translateY(-6px); }
+.menu-card img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+}
+.menu-card-content{
+  padding:18px;
+  text-align:left;
+}
+.menu-card h3{ font-size:22px; margin-bottom:12px; }
+.menu-card ul{ margin-left:18px; line-height:1.55; }
+.price{
+  margin-top:14px;
+  font-size:22px;
+  font-weight:700;
+  color:#ff5f02;
+}
+/* ----------------------------------------------------
+   TESTIMONI (HORIZONTAL CARD)
+---------------------------------------------------- */
+.testi-section{
+  background:#fff7ec;
+  padding:70px 22px;
+}
+
+.testi-horizontal{
+  display:flex;
+  justify-content:center;
+  gap:24px;
+  flex-wrap:wrap;
+  margin-bottom:40px;
+}
+
+.testi-card{
+  width:330px;
+  background:white;
+  border-radius:18px;
+  box-shadow:0 6px 14px rgba(0,0,0,.1);
+  padding:20px;
+  text-align:left;
+  position:relative;
+  transition:.25s;
+}
+.testi-card:hover{
+  transform:translateY(-5px);
+}
+
+.testi-img{
+  width:70px;
+  height:70px;
+  border-radius:50%;
+  object-fit:cover;
+  position:absolute;
+  top:-30px;
+  left:20px;
+  border:4px solid #d4a45d;
+}
+
+.testi-content{
+  margin-top:45px;
+}
+.testi-content h3{
+  margin:5px 0;
+  color:#a87435;
+}
+.stars{
+  color:#ffb400;
+  margin-bottom:10px;
+}
+
+/* ----------------------------------------------------
+   FOOTER
+---------------------------------------------------- */
+.footer{
+  background:#222;
+  color:#fff;
+  padding:50px 20px 20px;
+}
+.footer-container{
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:30px;
+  max-width:1200px;
+  margin:auto;
+}
+.footer-brand h2{ color:#ff8c00; }
+.footer-links h3, .footer-social h3{ color:#ff8c00; }
+
+.footer-links ul{
+  list-style:none;
+  padding:0;
+}
+.footer-links ul li a{
+  color:#eee;
+  text-decoration:none;
+  transition:.3s;
+}
+.footer-links ul li a:hover{ color:#ff8c00; }
+
+.social-icons a{
+  font-size:22px;
+  color:#eee;
+  margin-right:15px;
+}
+.social-icons a:hover{ color:#ff8c00; }
+
+.footer-bottom{
+  text-align:center;
+  border-top:1px solid #444;
+  margin-top:30px;
+  padding-top:15px;
+  color:#ccc;
+}
+
+/* ----------------------------------------------------
+   RESPONSIVE
+---------------------------------------------------- */
+@media(max-width:850px){
+  #hamburger{
+    display:block;
+  }
+  .nav-right{
+    position:absolute;
+    top:70px;
+    right:-200px;
+    flex-direction:column;
+    background:#ff6a00;
+    width:180px;
+    padding:20px;
+    border-radius:12px;
+    transition:.3s;
+  }
+  .nav-right.active{
+    right:10px;
+  }
+}
+
+@media(max-width:600px){
+  .hero h1{ font-size:32px; }
+  .info-section{ height:auto; padding:60px 20px; }
+}
 
 </style>
 </head>
 
 <body>
 
-<!-- WHATSAPP BUBBLE -->
 <div class="wa-bubble">
   <a href="https://wa.me/6287887090833?text=Assalamualaikum,%20saya%20ingin%20konsultasi%20Aqiqah">
     <div class="wa-text">Chat Sekarang</div>
@@ -538,9 +371,11 @@ section h2{
 <div class="navbar">
   <img src="logo aqiqqah.jpeg" alt="">
   <div class="brand">Hafshoh Aqiqah</div>
+
+  <div id="hamburger"><i class="bx bx-menu"></i></div>
+
   <div class="nav-right">
     <a href="#home">Beranda</a>
-    <a href="#tentang">Tentang</a>
     <a href="#info">Info Syari'ah</a>
     <a href="#paket">Paket</a>
     <a href="#testimoni">Testimoni</a>
@@ -550,19 +385,9 @@ section h2{
 <!-- HERO -->
 <section class="hero" id="home">
   <h1>Aqiqah Halal & Terpercaya</h1>
-  <p>Menyediakan layanan aqiqah berkualitas, higienis, halal, amanah & siap antar.</p>
+  <p>Layanan aqiqah berkualitas, higienis, amanah & siap antar.</p>
   <a href="#" class="btn-primary">Pesan Sekarang</a>
 </section>
-
-<!-- TENTANG -->
-<section id="tentang">
-  <h2>Tentang Layanan Aqiqah Kami</h2>
-  <p>
-    Hafshoh Aqiqah membantu keluarga Muslim menjalankan ibadah aqiqah sesuai sunnah.
-  </p>
-  <a href="#paket" class="btn-primary">Lihat Paket Aqiqah</a>
-</section>
-
 <!-- INFO SYARIAH -->
 <section class="info-section" id="info">
   <h2>Info Aqiqah Syariah</h2>
@@ -624,36 +449,60 @@ section h2{
   </div>
 </section>
 
-<!-- TESTIMONI -->
 <section class="testi-section" id="testimoni">
-  <img src="" alt="">
   <h2>Testimoni Pelanggan</h2>
 
-  <div class="testi-slider">
+  <div class="testi-horizontal">
 
     <div class="testi-card">
-      <img src="" class="testi-photo">
-      <p>"Masyaallah pelayanan sangat ramah, rasa masakan enak!"</p>
-      <div class="testi-name">Ibu Rini – Bogor</div>
+      <img src="testimoni anak 1.jpg" class="testi-img">
+      <div class="testi-content">
+        <h3>bapak fadli</h3>
+        <div class="stars">★★★★★</div>
+        <p>
+          Pelayanannya sangat baik. Daging empuk dan bumbunya meresap.
+          Pengiriman cepat. Recommended untuk acara aqiqah keluarga!
+        </p>
+      </div>
     </div>
 
     <div class="testi-card">
-      <img src="https://randomuser.me/api/portraits/men/31.jpg" class="testi-photo">
-      <p>"Amanah, proses jelas, semua sesuai syariat."</p>
-      <div class="testi-name">Andri – Depok</div>
+      <img src="testimoni anak 2.jpg" class="testi-img">
+      <div class="testi-content">
+        <h3>Nita</h3>
+        <div class="stars">★★★★★</div>
+        <p>
+          Alhamdulillah sangat puas! Paket lengkap dan porsinya banyak.
+          tetangga pada suka katanya daging nya gak 
+          bau. Terima kasih Hafshoh Aqiqah!
+        </p>
+      </div>
+    </div>
+
+    <div class="testi-card">
+      <img src="testimoni 3.jpg" class="testi-img">
+      <div class="testi-content">
+        <h3>Nama Pelanggan 3</h3>
+        <div class="stars">★★★★☆</div>
+        <p>
+          Rasanya enak, harga bersahabat, dan prosesnya mudah.
+          InsyaaAllah akan pesan lagi jika ada acara keluarga.
+        </p>
+      </div>
     </div>
 
   </div>
 
-  <a href="#" class="btn-testi">Konsultasi via WhatsApp</a>
+  <a href="https://wa.me/6287887090833" class="btn-testi">Konsultasi via WhatsApp</a>
 </section>
+
 <!-- FOOTER -->
 <footer class="footer">
   <div class="footer-container">
 
     <div class="footer-brand">
       <h2>Hafshoh Aqiqah</h2>
-      <p>Layanan Aqiqah Syari'ah terpercaya, higienis, dan siap antar.</p>
+      <p>Layanan Aqiqah Syari'ah terpercaya & higienis.</p>
     </div>
 
     <div class="footer-links">
@@ -677,13 +526,19 @@ section h2{
   </div>
 
   <div class="footer-bottom">
-    <p>© 2025 Hafshoh Aqiqah. All Rights Reserved.</p>
+    © 2025 Hafshoh Aqiqah. All Rights Reserved.
   </div>
 </footer>
 
+<!-- SCRIPT HAMBURGER -->
+<script>
+const hamburger = document.getElementById("hamburger");
+const navRight = document.querySelector(".nav-right");
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+hamburger.addEventListener("click", () => {
+  navRight.classList.toggle("active");
+});
+</script>
 
 </body>
 </html>
