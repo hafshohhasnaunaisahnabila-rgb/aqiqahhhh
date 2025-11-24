@@ -1,15 +1,48 @@
-<!DOCTYPE html>
-<html lang="id">
-
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hafshoh Aqiqah</title>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" />
-
 <style>
+gap:30px;
+}
+
+
+.social-icons{
+display:flex;
+flex-direction:column;
+gap:12px;
+}
+.social-icons a{
+display:flex;
+align-items:center;
+gap:10px;
+background:#000;
+border:1px solid gold;
+padding:12px 14px;
+border-radius:12px;
+color:#fff;
+text-decoration:none;
+}
+.social-icons a i{
+background:linear-gradient(180deg,#fff3a0,#ffdd00,#ffb700);
+color:#000;
+padding:10px;
+border-radius:50%;
+}
+
+
+.footer-bottom{
+text-align:center;
+margin-top:25px;
+padding-top:15px;
+border-top:1px solid #444;
+color:#aaa;
+font-size:14px;
+}
+
+
+@media(max-width:768px){
+.footer{text-align:center;}
+.social-icons a{justify-content:center;}
+}
+</style>
+
 
 /* ----------------------------------------------------
    GLOBAL
@@ -557,189 +590,3 @@ padding-top:15px;
     justify-content:center;
   }
 }
-</style>
-
-</head>
-
-<body>
-
-<div class="wa-bubble">
-  <a href="https://wa.me/6287887090833?text=Assalamualaikum,%20saya%20ingin%20konsultasi%20Aqiqah">
-    <div class="wa-text">Chat Sekarang</div>
-    <div class="wa-icon"><i class="fab fa-whatsapp"></i></div>
-  </a>
-</div>
-
-<!-- NAVBAR -->
-<div class="navbar">
-  <img src="logo aqiqqah.jpeg" alt="">
-  <div class="brand">Hafshoh Aqiqah</div>
-
-  <div id="hamburger"><i class="bx bx-menu"></i></div>
-
-  <div class="nav-right">
-    <a href="#home">Beranda</a>
-    <a href="#info">Info Syari'ah</a>
-    <a href="#paket">Paket</a>
-    <a href="#testimoni">Testimoni</a>
-  </div>
-</div>
-
-<!-- HERO -->
-<section class="hero" id="home">
-  <h1>Aqiqah Halal & Terpercaya</h1>
-  <p>Layanan aqiqah berkualitas, higienis, amanah & siap antar.</p>
-  <a href="#" class="btn-primary">Pesan Sekarang</a>
-</section>
-<!-- INFO SYARIAH -->
-<section class="info-section" id="info">
-  <h2>Info Aqiqah Syariah</h2>
-  <p>
-    Aqiqah adalah bentuk syukur kepada Allah atas kelahiran anak.  
-    • Laki-laki : 2 ekor kambing  
-    • Perempuan : 1 ekor kambing  
-  </p>
-</section>
-
-<!-- PAKET -->
-<section class="menu-section" id="paket">
-  <h2>Paket Aqiqah</h2>
-
-  <div class="menu-list">
-
-    <div class="menu-card">
-      <img src="nasi box.jpg">
-      <div class="menu-card-content">
-        <h3>Paket Hemat</h3>
-        <ul>
-          <li>500 gr daging</li>
-          <li>Gulai kambing</li>
-          <li>Sate kambing</li>
-          <li>Nasi box lengkap</li>
-        </ul>
-        <div class="price">Rp 1.950.000</div>
-      </div>
-    </div>
-
-    <div class="menu-card">
-      <img src="nasi box standar.jpg">
-      <div class="menu-card-content">
-        <h3>Paket Standar</h3>
-        <ul>
-          <li>700 gr daging</li>
-          <li>Gulai kambing spesial</li>
-          <li>Sate bumbu kacang</li>
-          <li>Nasi box premium</li>
-        </ul>
-        <div class="price">Rp 2.350.000</div>
-      </div>
-    </div>
-
-    <div class="menu-card">
-      <img src="paket spesial.jpeg">
-      <div class="menu-card-content">
-        <h3>Paket Premium</h3>
-        <ul>
-          <li>1 kg daging</li>
-          <li>Gulai premium</li>
-          <li>Sate premium</li>
-          <li>Nasi box + dessert</li>
-        </ul>
-        <div class="price">Rp 2.950.000</div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<section class="testi-section" id="testimoni">
-  <h2>Testimoni Pelanggan</h2>
-
-  <div class="testi-horizontal">
-
-    <div class="testi-card">
-      <img src="testimoni anak 1.jpg" class="testi-img">
-      <div class="testi-content">
-        <h3>bapak fadli</h3>
-        <div class="stars">★★★★★</div>
-        <p>
-          Pelayanannya sangat baik. Daging empuk dan bumbunya meresap.
-          Pengiriman cepat. Recommended untuk acara aqiqah keluarga!
-        </p>
-      </div>
-    </div>
-
-    <div class="testi-card">
-      <img src="testimoni anak 2.jpg" class="testi-img">
-      <div class="testi-content">
-        <h3>Nita</h3>
-        <div class="stars">★★★★★</div>
-        <p>
-          Alhamdulillah sangat puas! Paket lengkap dan porsinya banyak.
-          tetangga pada suka katanya daging nya gak 
-          bau. Terima kasih Hafshoh Aqiqah!
-        </p>
-      </div>
-    </div>
-
-    <div class="testi-card">
-      <img src="testimoni 3.jpg" class="testi-img">
-      <div class="testi-content">
-        <h3>Rumaisha</h3>
-        <div class="stars">★★★★☆</div>
-        <p>
-          Rasanya enak, harga bersahabat, dan prosesnya mudah.
-          InsyaaAllah akan pesan lagi jika ada acara keluarga.
-        </p>
-      </div>
-    </div>
-
-  </div>
-
-  <a href="https://wa.me/6287887090833" class="btn-testi">Konsultasi via WhatsApp</a>
-</section>
-
-
-  <!-- FOOTER -->
-<footer class="footer">
-<div class="footer-container">
-
-
-<div>
-<h2>Hafshoh Aqiqah</h2>
-<p>Layanan Aqiqah Syari'ah terpercaya & higienis.</p>
-</div>
-
-
-<div>
-<h3>Ikuti Kami</h3>
-<div class="social-icons">
-<a href="#"><i class="fa-brands fa-facebook"></i> Facebook</a>
-<a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a>
-<a href="#"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
-<a href="#"><i class="fa-solid fa-location-dot"></i> Maps</a>
-</div>
-</div>
-</div>
-
-
-<div class="footer-bottom">
-© 2025 Hafshoh Aqiqah. All Rights Reserved.
-</div>
-</footer>
-
-
-
-<script>
-const hamburger = document.getElementById("hamburger");
-const navMenu = document.querySelector(".nav-right");
-
-hamburger.addEventListener("click", () => {
-  navMenu.classList.toggle("active");
-});
-</script>
-
-
-</body>
-</html>
-
